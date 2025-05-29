@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
+// Define the props type for WeatherCard component
 type WeatherCardProps = {
   city: string;
   temperature: number;

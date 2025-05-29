@@ -4,6 +4,7 @@ import React from "react";
 import StockCard from "../components/cards/StockCard";
 import FinanceChart from "../components/charts/FinanceChart";
 
+//mockData for testing
 const mockData = [
   { date: "Mon", price: 121.45 },
   { date: "Tue", price: 122.1 },

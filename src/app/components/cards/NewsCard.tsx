@@ -3,13 +3,14 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+// Define the expected props for the NewsCard component
 interface NewsCardProps {
   title: string;
   imageUrl: string;
   description: string;
   source: string;
   publishedAt: string;
-  onClick: () => void;
+  onClick: () => void; // Function to handle card click
 }
 
 const NewsCard: React.FC<NewsCardProps> = ({
@@ -20,8 +21,9 @@ const NewsCard: React.FC<NewsCardProps> = ({
   publishedAt,
   onClick,
 }) => {
-  const [formattedDate, setFormattedDate] = useState("");
+  const [formattedDate, setFormattedDate] = useState(""); // State to store formatted date string
 
+  // Format the published date once when the component mounts or when publishedAt changes
   useEffect(() => {
     const date = new Date(publishedAt).toLocaleString();
     setFormattedDate(date);
@@ -53,4 +55,4 @@ const NewsCard: React.FC<NewsCardProps> = ({
   );
 };
 
-export default NewsCard;
+export default NewsCard; // Export the component for use elsewhere

@@ -3,6 +3,7 @@
 import React from "react";
 import NewsFeed from "../components/feeds/NewsFeed";
 
+//mockData for testing
 const mockArticles = [
   {
     title: "AI is transforming the tech industry",

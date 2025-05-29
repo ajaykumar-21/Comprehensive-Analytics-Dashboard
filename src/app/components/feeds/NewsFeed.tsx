@@ -5,6 +5,7 @@ import Image from "next/image";
 import NewsCard from "../cards/NewsCard";
 import { Dialog } from "@headlessui/react";
 
+// Defines the shape of a single news article item
 interface NewsItem {
   title: string;
   urlToImage: string;
@@ -15,8 +16,9 @@ interface NewsItem {
   url: string;
 }
 
+// Defines the props expected by a NewsFeed component
 interface NewsFeedProps {
-  articles: NewsItem[];
+  articles: NewsItem[]; // Array of news article objects
 }
 
 const NewsFeed: React.FC<NewsFeedProps> = ({ articles }) => {

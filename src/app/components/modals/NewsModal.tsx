@@ -2,7 +2,7 @@ import React from "react";
 
 type NewsModalProps = {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: () => void; // Function to call when the modal should close (e.g., clicking a close button)
   title: string;
   content: string;
   url: string;

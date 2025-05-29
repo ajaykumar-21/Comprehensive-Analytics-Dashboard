@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
+// Define the props type for StockCard component
 interface StockCardProps {
   symbol: string;
   price: number;
@@ -19,9 +20,10 @@ const StockCard: React.FC<StockCardProps> = ({
   low,
   volume,
 }) => {
-  const isPositive = change >= 0;
+  const isPositive = change >= 0; // Determine if the price change is positive (for green/red display)
   const [formattedVolume, setFormattedVolume] = useState("");
 
+  // Format the volume number when the component mounts or when volume updates
   useEffect(() => {
     setFormattedVolume(volume.toLocaleString());
   }, [volume]);
